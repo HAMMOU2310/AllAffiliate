@@ -1,0 +1,24 @@
+{
+    "target_language": "en",
+    "product_name": "16,000 Woodworking & Shed Blueprints",
+    "refund_rate_percentage": 2.4,
+    "recommended_posting_time_utc": "16:30",
+    "risk_level": "Low-Risk-High-Trust",
+    "compliance_matrix_status": {
+        "gdpr_compliant": true,
+        "no_pii_collected": true,
+        "affiliate_disclosure_forced": true
+    },
+    "theories_applied": [
+        "Sloping Edge Theory",
+        "Negative Halo Pricing",
+        "Competitor Neural Pathway Disruption",
+        "Temporal CLV Matrix (T0/T1/T2)"
+    ],
+    "financial_intelligence_module": {
+        "usdc_aggregation_recommendation": "Route net payout from ClickBank via Affise Pay directly to Vault-Node-01.",
+        "usdc_conversion_ready": true,
+        "optimal_conversion_threshold_usd": 1500,
+        "estimated_gas_savings_percentage": 18.5
+    }
+}

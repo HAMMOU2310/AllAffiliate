@@ -1,11 +1,52 @@
 [
   {
-    "id": "shedplans",
-    "name": "Shed Plans & Blueprints",
-    "desc": "خطط كاملة خطوة بخطوة لبناء سقيفة الأحلام، تستهدف هواة النجارة والأشغال اليدوية. ليست مناسبة لمن يريد سقيفة جاهزة خلال يومين.",
+    "id": "puravive",
+    "name": "Puravive",
+    "desc": "مكمل طبيعي لفقدان الوزن يعتمد على 'الأنسجة الدهنية البنية'. المزايا: سهل الاستخدام ومكونات طبيعية. العيوب: النتائج تختلف من شخص لآخر، يتطلب التزاماً طويلاً، والتسويق مبالغ فيه أحياناً. ليس سحراً بدون حمية.",
+    "price": "$59",
+    "link": "https://hop.clickbank.net/?affiliate=allaaffili&vendor=puravive",
+    "refund_rate": "منخفضة (60 يوم ضمان)",
+    "category": "Health & Fitness",
+    "keyword": "weight loss rice hack"
+  },
+  {
+    "id": "sugardefender",
+    "name": "Sugar Defender",
+    "desc": "تركيبة سائلة لدعم مستويات السكر في الدم والطاقة. المزايا: مكونات طبيعية وتطبيق سهل بالقطارة. العيوب: الطعم قد لا يعجب البعض، ليس بديلاً عن الأنسولين، وسعره مرتفع للشراء الفردي.",
+    "price": "$69",
+    "link": "https://hop.clickbank.net/?affiliate=allaaffili&vendor=sugardef",
+    "refund_rate": "متوسطة",
+    "category": "Health & Fitness",
+    "keyword": "blood sugar support"
+  },
+  {
+    "id": "smoothiediet",
+    "name": "The Smoothie Diet",
+    "desc": "خطة غذائية لمدة 21 يوماً تعتمد على السموذي لإنقاص الوزن بسرعة. المزايا: نتائج سريعة وهيكل واضح. العيوب: ستشعر بالجوع في البداية، يتطلب تنظيفاً مستمراً للخلاط، وقد تستعيد الوزن إذا عدت للعادات القديمة.",
     "price": "$37",
-    "link": "https://hop.clickbank.net/?affiliate=allaaffili&vendor=shedplans",
+    "link": "https://hop.clickbank.net/?affiliate=allaaffili&vendor=smoothiedi",
     "refund_rate": "منخفضة",
-    "category": "DIY"
+    "category": "Health & Fitness",
+    "keyword": "smoothie diet plan"
+  },
+  {
+    "id": "tedswoodworking",
+    "name": "Ted's Woodworking",
+    "desc": "مجموعة ضخمة من 16,000 خطة نجارة للمحترفين والهواة. المزايا: تنوع هائل وسعر منخفض جداً للمحتوى. العيوب: التنظيم فوضوي، بعض الخطط قديمة أو ناقصة التفاصيل، وتحتاج لشراء أدواتك الخاصة.",
+    "price": "$67",
+    "link": "https://hop.clickbank.net/?affiliate=allaaffili&vendor=tedswood",
+    "refund_rate": "منخفضة",
+    "category": "DIY & Home",
+    "keyword": "woodworking projects"
+  },
+  {
+    "id": "prodentim",
+    "name": "ProDentim",
+    "desc": "حلوى بروبيوتيك متطورة مصممة لإعادة بناء اللثة والأسنان. المزايا: سهلة الاستهلاك وتنعش النفس. العيوب: ليست بديلاً عن تنظيف الأسنان الطبي، النتائج تظهر بعد 3 أشهر على الأقل، والسعر مرتفع قليلاً.",
+    "price": "$69",
+    "link": "https://hop.clickbank.net/?affiliate=allaaffili&vendor=prodentim",
+    "refund_rate": "منخفضة",
+    "category": "Health & Fitness",
+    "keyword": "dental probiotics"
   }
 ]

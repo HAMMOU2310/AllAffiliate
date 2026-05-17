@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+﻿import os
+import sys
+import codecs
+
+if sys.platform == "win32":
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
+
+def deploy_friendly_compliant_store():
+    print("=========================================================")
+    print("✨ DEPLOYING: ELEGANT WELCOME & ETHICAL SEARCH ROUTER")
+    print("=========================================================")
+    
+    html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -238,3 +250,13 @@
     </script>
 </body>
 </html>
+"""
+    
+    with open("index.html", "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print("=========================================================")
+    print("✅ REFACTOR SUCCESS: Horror screen replaced with premium welcome screen!")
+    print("=========================================================")
+
+if __name__ == "__main__":
+    deploy_friendly_compliant_store()
