@@ -160,7 +160,27 @@
         </div>
     </div>
 
-    <div id="payment-modal" class="modal">
+    <div class="gateway-box crypto" onclick="document.getElementById('binance-pay-modal').style.display='flex'">
+    <div style="cursor: pointer;">
+        <strong style="font-size: 1.1em; color: var(--friendly-green);">🟡 Binance Pay / Crypto</strong><br>
+        <span style="color: var(--text-muted); font-size: 0.9em;">Pay with USDT (TRC20)</span>
+    </div>
+</div>
+
+<div id="binance-pay-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:#fff; padding:25px; border-radius:12px; width:90%; max-width:400px; text-align:center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <h3 style="margin-top: 0;">إتمام الدفع بـ USDT</h3>
+        <p>يرجى إرسال مبلغ الطلب إلى المحفظة التالية:</p>
+        <div style="background:#f4f4f4; padding:15px; border: 2px dashed #f3ba2f; font-family: monospace; font-weight: bold; margin: 15px 0; word-break: break-all;">
+            TAKtcxp3C4WA9phjztySWwo2kT6QxgddBm
+        </div>
+        <p style="color:#d9534f; font-weight:bold; margin-bottom: 20px;">
+            ⚠️ تنبيه هام: أرسل عبر شبكة TRON (TRC20) فقط.<br>
+            الإرسال عبر شبكة أخرى يؤدي لضياع الأموال.
+        </p>
+        <button onclick="document.getElementById('binance-pay-modal').style.display='none'" style="padding: 10px 20px; cursor: pointer;">إغلاق</button>
+    </div>
+</div>
         <div class="modal-content">
             <span class="close-modal" onclick="closePaymentDashboard()">&times;</span>
             <h2 id="modal-product-title">Select Secure Payment Method</h2>
@@ -177,16 +197,15 @@
                 </div>
             </div>
 
-            <div class="gateway-box crypto" onclick="alert('Opening Binance Pay QR Code Interface... Direct USDT Transfer to Funding Wallet.')">
-                <div>
-                    <strong style="font-size: 1.1em; color: var(--friendly-green);">🟡 Binance Pay / Crypto</strong><br>
-                    <span style="color: var(--text-muted); font-size: 0.9em;">Pay with USDT, BTC, BNB</span>
-                </div>
-                <div>
-                    <span id="crypto-adjusted-price" style="font-weight: bold; font-size: 1.1em; color: var(--friendly-green);">$0.00</span>
-                    <span class="badge-discount">-2.5% OFF</span>
-                </div>
-            </div>
+            <div class="gateway-box crypto" onclick="document.getElementById('binance-pay-modal').style.display='flex'">
+    <div>
+        <strong style="font-size: 1.1em; color: var(--friendly-green);">🟡 Binance Pay / Crypto</strong><br>
+        <span style="color: var(--text-muted); font-size: 0.9em;">Pay with USDT (TRC20 Only)</span>
+    </div>
+    <div>
+        <span id="crypto-adjusted-price" style="font-weight: bold; font-size: 1.1em; color: var(--friendly-green);"></span>
+    </div>
+</div>
             
             <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 20px;">🔒 All transactions are encrypted and monitored by the Shariah Compliance Protocol.</p>
         </div>
