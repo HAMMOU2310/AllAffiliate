@@ -186,21 +186,15 @@
             <h2 id="modal-product-title">Select Secure Payment Method</h2>
             <p style="color: var(--text-muted);">Please choose your preferred gateway below. Prices are auto-adjusted based on processing costs to give you the best deal.</p>
             
-            <div class="gateway-box" id="card-gateway-link" onclick="alert('Redirecting to secure Credit Card Processor...')">
-                <div>
-                    <div class="gateway-box card" onclick="window.location.href='https://be7f9bnp12ysesdw31rltcp37o.hop.clickbank.net'">
+            <div class="gateway-box card" onclick="window.location.href='https://be7f9bnp12ysesdw31rltcp37o.hop.clickbank.net'" style="cursor: pointer; padding: 15px; border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px;">
     <div style="font-weight: bold; font-size: 1.1em;">💳 Credit / Debit Card</div>
-    <span style="color: var(--text-muted); font-size: 0.9em;">Visa, MasterCard, Amex</span>
+    <span style="color: #666; font-size: 0.9em;">Visa, MasterCard, Amex</span>
 </div>
-                    <span style="color: var(--text-muted); font-size: 0.9em;">Visa, MasterCard, Amex</span>
-                </div>
-                <div>
-                    <span id="card-adjusted-price" style="font-weight: bold; font-size: 1.1em;">$0.00</span>
-                    <span class="badge-fee">+2.5% Fee</span>
-                </div>
-            </div>
 
-            <div class="gateway-box crypto" onclick="document.getElementById('binance-pay-modal').style.display='flex'">
+<div class="gateway-box crypto" onclick="document.getElementById('binance-pay-modal').style.display='flex'" style="cursor: pointer; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+    <strong style="font-size: 1.1em; color: #28a745;">🟡 Binance Pay / Crypto</strong><br>
+    <span style="font-size: 0.9em; color: #666;">Pay with USDT (TRC20 Only)</span>
+</div>
     <div>
         <strong style="font-size: 1.1em; color: var(--friendly-green);">🟡 Binance Pay / Crypto</strong><br>
         <span style="color: var(--text-muted); font-size: 0.9em;">Pay with USDT (TRC20 Only)</span>
