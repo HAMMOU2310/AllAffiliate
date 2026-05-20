@@ -188,7 +188,10 @@
             
             <div class="gateway-box" id="card-gateway-link" onclick="alert('Redirecting to secure Credit Card Processor...')">
                 <div>
-                    <strong style="font-size: 1.1em;">💳 Credit / Debit Card</strong><br>
+                    <div class="gateway-box card" onclick="window.location.href='https://be7f9bnp12ysesdw31rltcp37o.hop.clickbank.net'">
+    <div style="font-weight: bold; font-size: 1.1em;">💳 Credit / Debit Card</div>
+    <span style="color: var(--text-muted); font-size: 0.9em;">Visa, MasterCard, Amex</span>
+</div>
                     <span style="color: var(--text-muted); font-size: 0.9em;">Visa, MasterCard, Amex</span>
                 </div>
                 <div>
@@ -284,5 +287,17 @@
             document.getElementById('master-grid-hub').style.display = 'grid';
         }
     </script>
+    <script>
+    document.querySelectorAll('.honest-note').forEach(note => {
+        const message = note.getAttribute('data-message');
+        note.innerHTML = `
+        <div style="background: #fdfdfd; padding: 15px; border-left: 5px solid #28a745; margin: 15px 0; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <p style="margin: 0; color: #333; font-size: 0.95em; line-height: 1.5;">
+                <strong>💡 لماذا اخترنا هذا المنتج؟</strong><br>
+                ${message}
+            </p>
+        </div>`;
+    });
+</script>
 </body>
 </html>
