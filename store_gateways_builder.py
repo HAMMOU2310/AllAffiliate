@@ -210,7 +210,28 @@ def inject_dual_payment_gateways():
 
         // فتح لوحة التحكم بالدفع وحساب القيم ديناميكياً بدقة
         function openPaymentDashboard(productName, basePrice) {
-            document.getElementById('modal-product-title').innerText = productName;
+            // البحث عن الرابط الصحيح للمنتج من قاعدة البيانات (products.json) ديناميكياً
+            document.getElementById('card-gateway-link').onclick = async function() {
+                try {
+                    // جلب البيانات من قاعدة المنتجات
+                    let response = await fetch('products.json');
+                    let products = await response.json();
+                    
+                    // البحث عن المنتج الذي اختاره العميل بناءً على اسمه
+                    let selectedProduct = products.find(p => p.name === productName);
+                    
+                    // فتح رابط كليك بانك الخاص بالمنتج (والذي يحتوي على عمولتك)
+                    if (selectedProduct && selectedProduct.link) {
+                        window.open(selectedProduct.link, "_blank");
+                    } else {
+                        // رابط احتياطي مضمون بعمولتك (allaaffili) في حال حدوث أي خطأ
+                        window.open("https://hop.clickbank.net/?affiliate=allaaffili&vendor=puravive", "_blank");
+                    }
+                } catch (error) {
+                    console.error("Error fetching link:", error);
+                    window.open("https://hop.clickbank.net/?affiliate=allaaffili&vendor=puravive", "_blank");
+                }
+            };
             
             // حساب الزيادة والخصم بنسبة 2.5% بدقة رياضية
             let cardPrice = (basePrice * 1.025).toFixed(2);
