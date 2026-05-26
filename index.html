@@ -10,7 +10,6 @@
 
     <header class="bg-white shadow-sm py-6 text-center border-b border-gray-200">
         <h1 class="text-3xl font-bold text-gray-800">📊 The Statistical Transparency Index</h1>
-        <p class="text-sm text-gray-500 mt-2">الصدق الجذري الشامل، الممتثل للشريعة الإسلامية والشفافية الإحصائية الكاملة للمستهلك</p>
     </header>
 
     <div class="max-w-4xl mx-auto px-4 mt-8">
@@ -34,7 +33,7 @@
 
         async function loadStore() {
             try {
-                // منع الكاش تماماً بإضافة متغير زمني فريد لضمان ظهور التحديثات فوراً
+                // منع الكاش لضمان ظهور التحديثات فوراً
                 const response = await fetch('products.json?t=' + new Date().getTime());
                 const data = await response.json();
                 allProducts = data.products || [];
@@ -66,16 +65,11 @@
                                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">${prod.category}</span>
                                 <span class="text-xs px-2 py-1 rounded font-bold border ${badgeColor}">🛡️ جدار الحماية: ${shariahStatus}</span>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-800 mb-2">${prod.title}</h3>
-                            <p class="text-sm text-gray-600 mb-4 bg-gray-50 p-2 rounded border border-gray-100">${prod.description}</p>
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">${prod.title}</h3>
                             
-                            <div class="text-xs mb-3 bg-red-50 p-2 rounded text-red-700 border border-red-100">
-                                <strong>📊 إحصائية الشفافية (الندرة العكسية):</strong> ${prod.reverse_scarcity || 'خاضع لمراجعة الأمان العكسية.'}
-                            </div>
-
-                            <div class="text-xs text-amber-900 bg-amber-50 p-2 rounded border border-amber-200 mb-4">
-                                <strong>🚫 لمن لا يصلح هذا المنتج؟</strong> ${prod.who_is_it_not_for || 'لا يصلح للباحثين عن الثراء السريع بدون جهد حقيقي.'}
-                            </div>
+                            <p class="text-sm text-gray-700 leading-relaxed mb-4 bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-inner">
+                                ${prod.description}
+                            </p>
                         </div>
 
                         <div class="border-t border-gray-100 pt-4 mt-2 flex justify-between items-center">
@@ -90,7 +84,7 @@
             });
         }
 
-        // محرك البحث الفوري والمستمر في الأرشيف الدائم بالكامل
+        // محرك البحث الفوري والمستمر
         document.getElementById('searchInput').addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
             const gridTitle = document.getElementById('gridTitle');
