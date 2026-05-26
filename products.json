@@ -1,0 +1,70 @@
+{
+    "products": [
+        {
+            "id": "cb_alpilean",
+            "vendor": "alpilean",
+            "title": "Alpilean - Weight Loss",
+            "category": "Health & Fitness",
+            "description": "The premier alpine secret for healthy weight loss.",
+            "price": "$59",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=alpilean",
+            "date_added": "2026-05-26",
+            "last_seen": "2026-05-26 12:24:15"
+        },
+        {
+            "id": "cb_javaburn",
+            "vendor": "javaburn",
+            "title": "Java Burn - Coffee Slimming",
+            "category": "Health & Fitness",
+            "description": "The world's first patent-pending formula to boost metabolism.",
+            "price": "$49",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=javaburn",
+            "date_added": "2026-05-26",
+            "last_seen": "2026-05-26 12:24:15"
+        },
+        {
+            "id": "cb_puravive",
+            "vendor": "puravive",
+            "title": "Puravive - Exotic Dissolve",
+            "category": "Weight Loss",
+            "description": "Natural exotic ingredients targeting low brown adipose tissue.",
+            "price": "$39",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=puravive",
+            "date_added": "2026-05-26",
+            "last_seen": "2026-05-26 12:24:15"
+        },
+        {
+            "id": "cb_livpure",
+            "vendor": "livpure",
+            "title": "Liv Pure - Liver Optimization",
+            "category": "Health",
+            "description": "Purify your liver and accelerate fat burning naturally.",
+            "price": "$69",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=livpure",
+            "date_added": "2026-05-26",
+            "last_seen": "2026-05-26 12:24:15"
+        },
+        {
+            "id": "cb_sugardefender",
+            "vendor": "sugardef",
+            "title": "Sugar Defender - Blood Sugar",
+            "category": "Wellness",
+            "description": "Advanced bio-engineered formula for glucose support.",
+            "price": "$49",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=sugardef",
+            "date_added": "2026-05-26",
+            "last_seen": "2026-05-26 12:24:15"
+        },
+        {
+            "id": "cb_denticore",
+            "vendor": "denticore",
+            "title": "DentiCore - Oral Health",
+            "category": "Dental",
+            "description": "Deep oxygenation process supporting healthy teeth and gums.",
+            "price": "$59",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=denticore",
+            "date_added": "2026-05-26",
+            "last_seen": "2026-05-26 12:24:15"
+        }
+    ]
+}

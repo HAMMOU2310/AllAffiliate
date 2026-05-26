@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Statistical Transparency Index | المتجر الذكي</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <header class="bg-white shadow-sm py-6 text-center border-b border-gray-200">
+        <h1 class="text-3xl font-bold text-gray-800">📊 The Statistical Transparency Index</h1>
+        <p class="text-sm text-gray-500 mt-2">No Flattery. No Hype. Just Peer-Reviewed Consumer Performance Data.</p>
+    </header>
+
+    <div class="max-w-4xl mx-auto px-4 mt-8">
+        <div class="flex gap-2">
+            <input type="text" id="searchInput" placeholder="ابحث هنا عن منتجات (حلال) أو (حرام) أو باسم المنتج في الأرشيف الدائم..." 
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-right bg-white">
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <h2 id="gridTitle" class="text-xl font-bold mb-6 text-gray-700">🔥 أحدث المنتجات الرابحة (تتجدد كل 6 ساعات)</h2>
+        
+        <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-6 text-center text-xs text-gray-400 mt-24">
+        © 2026 Decentralized Consumer Intelligence Hub. All Rights Reserved.
+    </footer>
+
+    <script>
+        let allProducts = [];
+
+        // 1. جلب البيانات من ملف الـ JSON الثابت
+        async function loadStore() {
+            try {
+                const response = await fetch('products.json');
+                const data = await response.json();
+                allProducts = data.products || [];
+                
+                // عرض آخر 6 منتجات تمت إضافتها في الخانات الرئيسية
+                const latestSix = [...allProducts].reverse().slice(0, 6);
+                renderProducts(latestSix);
+            } catch (error) {
+                console.error("خطأ في قراءة ملف المنتجات:", error);
+                document.getElementById('productsGrid').innerHTML = '<p class="text-red-500 text-center col-span-3">⚠️ يرجى تشغيل سكريبت البايثون لتوليد المنتجات أولاً.</p>';
+            }
+        }
+
+        // 2. دالة بناء خانات المنتجات في الصفحة
+        function renderProducts(productsList) {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = "";
+            
+            if(productsList.length === 0) {
+                grid.innerHTML = '<p class="text-gray-500 text-center col-span-3">❌ لم يتم العثور على نتائج في الأرشيف.</p>';
+                return;
+            }
+
+            productsList.forEach(prod => {
+                const card = `
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded-sm font-semibold mb-3">${prod.category}</span>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">${prod.title}</h3>
+                            <p class="text-sm text-gray-600 mb-4">${prod.description}</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4 mt-4 flex justify-between items-center">
+                            <span class="text-xl font-extrabold text-green-600">${prod.price}</span>
+                            <a href="${prod.link}" target="_blank" class="bg-gray-900 text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                                View Analysis
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        // 3. محرك البحث الفوري في الأرشيف القديم والجديد
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const gridTitle = document.getElementById('gridTitle');
+
+            if (query === "") {
+                gridTitle.innerText = "🔥 أحدث المنتجات الرابحة (تتجدد كل 6 ساعات)";
+                const latestSix = [...allProducts].reverse().slice(0, 6);
+                renderProducts(latestSix);
+            } else {
+                gridTitle.innerText = `🔍 نتائج البحث في الأرشيف الدائم (${allProducts.length} منتج مؤرشف)`;
+                const filtered = allProducts.filter(prod => 
+                    prod.title.toLowerCase().includes(query) || 
+                    prod.description.toLowerCase().includes(query) || 
+                    prod.category.toLowerCase().includes(query)
+                );
+                renderProducts(filtered);
+            }
+        });
+
+        // تشغيل المتجر عند التحميل
+        window.onload = loadStore;
+    </script>
+</body>
+</html>
