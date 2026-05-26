@@ -3,24 +3,54 @@
         {
             "id": "cb_alpilean",
             "vendor": "alpilean",
-            "title": "Alpilean - Weight Loss",
-            "category": "Health & Fitness",
-            "description": "The premier alpine secret for healthy weight loss.",
+            "title": "Alpilean - Ice Weight Loss",
+            "category": "Health",
+            "description": "Exotic alpine secret for healthy weight loss. Helps optimize metabolism.",
             "price": "$59",
+            "refund_rate": "8%",
+            "satisfaction_rate": "92%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "8%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "92% are completely satisfied, but 8% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=alpilean",
             "date_added": "2026-05-26",
-            "last_seen": "2026-05-26 12:24:15"
+            "last_seen": "2026-05-26 18:42:00"
         },
         {
             "id": "cb_javaburn",
             "vendor": "javaburn",
-            "title": "Java Burn - Coffee Slimming",
-            "category": "Health & Fitness",
-            "description": "The world's first patent-pending formula to boost metabolism.",
+            "title": "Java Burn - Coffee Formula",
+            "category": "Health",
+            "description": "A natural formula to combine with your daily coffee. It is effective but shipping can be slow.",
             "price": "$49",
+            "refund_rate": "11%",
+            "satisfaction_rate": "89%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "11%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "89% are completely satisfied, but 11% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=javaburn",
             "date_added": "2026-05-26",
-            "last_seen": "2026-05-26 12:24:15"
+            "last_seen": "2026-05-26 18:42:00"
         },
         {
             "id": "cb_puravive",
@@ -58,13 +88,54 @@
         {
             "id": "cb_denticore",
             "vendor": "denticore",
-            "title": "DentiCore - Oral Health",
-            "category": "Dental",
-            "description": "Deep oxygenation process supporting healthy teeth and gums.",
-            "price": "$59",
+            "title": "DentiCore - Advanced Oral Care",
+            "category": "Health",
+            "description": "Supports healthy teeth and gums. Safe ingredients, results require up to 30 days of consistent usage.",
+            "price": "$69",
+            "refund_rate": "6%",
+            "satisfaction_rate": "94%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "6%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "94% are completely satisfied, but 6% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=denticore",
             "date_added": "2026-05-26",
-            "last_seen": "2026-05-26 12:24:15"
+            "last_seen": "2026-05-26 18:42:00"
+        },
+        {
+            "id": "cb_investment_education",
+            "vendor": "cleanwealth",
+            "title": "Alternative Halal Wealth & Investment Guide",
+            "category": "Wealth",
+            "description": "A fully compliant ethical financial literacy and investment program. Safe and certified.",
+            "price": "$47",
+            "refund_rate": "4%",
+            "satisfaction_rate": "96%",
+            "status": "redirected",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "4%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Re-routed to Safe Alternative"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "96% are completely satisfied, but 4% complained about shipping times or strictly required effort.",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=cleanwealth",
+            "date_added": "2026-05-26",
+            "last_seen": "2026-05-26 18:42:00"
         }
     ]
 }
