@@ -33,14 +33,14 @@
 
         async function loadStore() {
             try {
-                // منع الكاش لضمان ظهور التحديثات فوراً
+                // منع الكاش لضمان التحديث الفوري
                 const response = await fetch('products.json?t=' + new Date().getTime());
                 const data = await response.json();
                 allProducts = data.products || [];
                 renderProducts(allProducts);
             } catch (error) {
                 console.error("خطأ في قراءة ملف المنتجات:", error);
-                document.getElementById('productsGrid').innerHTML = '<p class="text-red-500 text-center col-span-3 font-bold py-10">⚠️ خطأ: فشل جلب قاعدة البيانات الذكية. يرجى تشغيل سكريبت البايثون لتوليد ملف products.json أولاً.</p>';
+                document.getElementById('productsGrid').innerHTML = '<p class="text-red-500 text-center col-span-3 font-bold py-10">⚠️ خطأ: فشل جلب قاعدة البيانات الذكية.</p>';
             }
         }
 
@@ -57,6 +57,10 @@
                 const isRedirected = prod.status === "redirected";
                 const badgeColor = isRedirected ? "bg-amber-100 text-amber-800 border-amber-200" : "bg-emerald-100 text-emerald-800 border-emerald-200";
                 const shariahStatus = prod.metadata?.shariah_compliant || "Yes";
+                
+                // توليد صورة بديلة أنيقة إذا لم تكن الصورة الحقيقية موجودة في قاعدة البيانات
+                const defaultImage = `https://placehold.co/600x400/e2e8f0/475569?text=${encodeURIComponent(prod.vendor || 'Product')}`;
+                const productImage = prod.image || defaultImage;
 
                 const card = `
                     <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 ${isRedirected ? 'border-t-amber-500' : 'border-t-emerald-500'}">
@@ -65,7 +69,12 @@
                                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">${prod.category}</span>
                                 <span class="text-xs px-2 py-1 rounded font-bold border ${badgeColor}">🛡️ جدار الحماية: ${shariahStatus}</span>
                             </div>
+                            
                             <h3 class="text-lg font-bold text-gray-800 mb-4">${prod.title}</h3>
+                            
+                            <div class="mb-4 rounded-lg overflow-hidden border border-gray-200 shadow-sm h-48 bg-gray-100">
+                                <img src="${productImage}" alt="${prod.title}" class="w-full h-full object-cover">
+                            </div>
                             
                             <p class="text-sm text-gray-700 leading-relaxed mb-4 bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-inner">
                                 ${prod.description}
@@ -84,7 +93,7 @@
             });
         }
 
-        // محرك البحث الفوري والمستمر
+        // محرك البحث الفوري
         document.getElementById('searchInput').addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
             const gridTitle = document.getElementById('gridTitle');
