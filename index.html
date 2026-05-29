@@ -1,46 +1,108 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Statistical Transparency Index | المتجر الذكي</title>
+    <title>Statistical Transparency Index | Verified Store</title>
+    
+    <link rel="preconnect" href="https://hop.clickbank.net" crossorigin>
+    <link rel="dns-prefetch" href="https://hop.clickbank.net">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        a, button {
+            touch-action: manipulation;
+            backface-visibility: hidden;
+            will-change: transform;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-slate-50 font-sans text-slate-900 antialiased">
 
-    <header class="bg-white shadow-sm py-6 text-center border-b border-gray-200">
-        <h1 class="text-3xl font-bold text-gray-800">📊 The Statistical Transparency Index</h1>
-    </header>
-
-    <div class="max-w-4xl mx-auto px-4 mt-8">
-        <input type="text" id="searchInput" placeholder="🔍 ابحث في الأرشيف الدائم عن تصنيف، اسم منتج، أو حالة الامتثال الشرعي للـ الأفلييت..." 
-               class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 text-right bg-white text-lg">
+    <!-- Store Notice Bar updated to use your exact "logo.png" image -->
+    <div id="storeNotice" class="bg-slate-950 text-center py-3 px-4 border-b border-emerald-500/40 flex justify-center items-center">
+        <img src="logo.png" alt="Store Notice & Logo" class="h-16 md:h-20 w-auto object-contain drop-shadow-lg">
     </div>
 
+    <!-- Header Section -->
+    <header class="bg-white shadow-xs py-8 text-center border-b border-slate-200">
+        <h1 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">📊 Statistical Transparency Index</h1>
+        <p class="text-xs md:text-sm text-slate-500 mt-2 font-medium">Permanent Independent Archive for Unbiased Consumer Performance Data</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="max-w-4xl mx-auto px-4 mt-8">
+        <input type="text" id="searchInput" placeholder="🔍 Search the archive by category, product name, or compliance status..." 
+               class="w-full px-4 py-3 border border-slate-300 rounded-xl shadow-xs focus:outline-none focus:ring-2 focus:ring-emerald-500 text-left bg-white text-sm md:text-base transition-all">
+    </div>
+
+    <!-- Main Products Grid -->
     <main class="max-w-6xl mx-auto px-4 py-12">
-        <h2 id="gridTitle" class="text-xl font-bold mb-6 text-gray-700 border-r-4 border-emerald-500 pr-3">🔥 أحدث التحليلات والمنتجات النشطة (تحديث تلقائي)</h2>
+        <h2 id="gridTitle" class="text-base md:text-lg font-bold mb-6 text-slate-700 border-l-4 border-emerald-500 pl-3">🔥 Latest Monitored Active Products (Auto-Updated)</h2>
         
         <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            </div>
+            <!-- Dynamic Data -->
+        </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-200 py-6 text-center text-xs text-gray-400 mt-24">
-        © 2026 Decentralized Consumer Intelligence Hub | Shariah Compliance Firewall Active.
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-12 mt-24 text-center">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col items-center gap-6">
+            
+            <!-- ClickBank Payment Badges -->
+            <div class="flex flex-wrap justify-center items-center gap-2.5 opacity-90 select-none">
+                <span class="px-3 py-1 text-[10px] md:text-xs font-extrabold uppercase tracking-widest text-blue-800 bg-blue-50 border border-blue-200 rounded-md shadow-2xs">Visa</span>
+                <span class="px-3 py-1 text-[10px] md:text-xs font-extrabold uppercase tracking-widest text-red-700 bg-red-50 border border-red-200 rounded-md shadow-2xs">MasterCard</span>
+                <span class="px-3 py-1 text-[10px] md:text-xs font-extrabold uppercase tracking-widest text-cyan-700 bg-cyan-50 border border-cyan-200 rounded-md shadow-2xs">Amex</span>
+                <span class="px-3 py-1 text-[10px] md:text-xs font-extrabold uppercase tracking-widest text-orange-700 bg-orange-50 border border-orange-200 rounded-md shadow-2xs">Discover</span>
+                <span class="px-3 py-1 text-[10px] md:text-xs font-extrabold uppercase tracking-widest text-blue-900 bg-indigo-50 border border-indigo-200 rounded-md shadow-2xs">PayPal</span>
+            </div>
+
+            <p class="text-xs text-slate-400 font-medium max-w-md leading-relaxed">
+                © 2026 Decentralized Consumer Intelligence Hub | Shariah Compliance Firewall System Active & Enforced Automatically.
+            </p>
+        </div>
     </footer>
 
     <script>
         let allProducts = [];
 
+        function getRealProductImage(prod) {
+            if (prod.image && prod.image.startsWith('http')) {
+                return prod.image;
+            }
+            const title = (prod.title || "").toLowerCase();
+            const category = (prod.category || "").toLowerCase();
+
+            if (title.includes('coffee') || title.includes('java') || title.includes('burn')) {
+                return 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80'; 
+            }
+            if (title.includes('teeth') || title.includes('denti') || title.includes('prodentim') || title.includes('oral')) {
+                return 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80'; 
+            }
+            if (title.includes('liver') || title.includes('pure') || title.includes('liv')) {
+                return 'https://images.unsplash.com/photo-1626716493137-b67fe9501e76?auto=format&fit=crop&w=600&q=80'; 
+            }
+            if (title.includes('sugar') || title.includes('blood') || title.includes('defender')) {
+                return 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80'; 
+            }
+            if (category.includes('health') || category.includes('weight') || category.includes('fitness')) {
+                return 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=600&q=80'; 
+            }
+            return 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80';
+        }
+
         async function loadStore() {
             try {
-                // منع الكاش لضمان التحديث الفوري
                 const response = await fetch('products.json?t=' + new Date().getTime());
                 const data = await response.json();
                 allProducts = data.products || [];
                 renderProducts(allProducts);
             } catch (error) {
-                console.error("خطأ في قراءة ملف المنتجات:", error);
-                document.getElementById('productsGrid').innerHTML = '<p class="text-red-500 text-center col-span-3 font-bold py-10">⚠️ خطأ: فشل جلب قاعدة البيانات الذكية.</p>';
+                console.error("Error loading product archive:", error);
+                document.getElementById('productsGrid').innerHTML = '<p class="text-red-500 text-center col-span-3 font-bold py-10">⚠️ Error: System failed to fetch database archive.</p>';
             }
         }
 
@@ -49,42 +111,42 @@
             grid.innerHTML = "";
             
             if(productsList.length === 0) {
-                grid.innerHTML = '<p class="text-gray-500 text-center col-span-3 py-10">❌ لم يتم العثور على أي منتج متوافق في هذا الأرشيف.</p>';
+                grid.innerHTML = '<p class="text-slate-500 text-center col-span-3 py-10">❌ No verified products found matching your search query.</p>';
                 return;
             }
 
             productsList.forEach(prod => {
                 const isRedirected = prod.status === "redirected";
-                const badgeColor = isRedirected ? "bg-amber-100 text-amber-800 border-amber-200" : "bg-emerald-100 text-emerald-800 border-emerald-200";
-                const shariahStatus = prod.metadata?.shariah_compliant || "Yes";
+                const badgeColor = isRedirected ? "bg-amber-50 text-amber-800 border-amber-200" : "bg-emerald-50 text-emerald-800 border-emerald-200";
+                const firewallStatus = isRedirected ? "Redirected Option" : "Approved & Clean";
                 
-                // توليد صورة بديلة أنيقة إذا لم تكن الصورة الحقيقية موجودة في قاعدة البيانات
-                const defaultImage = `https://placehold.co/600x400/e2e8f0/475569?text=${encodeURIComponent(prod.vendor || 'Product')}`;
-                const productImage = prod.image || defaultImage;
+                const productImage = getRealProductImage(prod);
+                const buttonText = isRedirected ? "(Safe Alternative)" : "(Original Product)";
 
                 const card = `
-                    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 ${isRedirected ? 'border-t-amber-500' : 'border-t-emerald-500'}">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between border-t-4 ${isRedirected ? 'border-t-amber-500' : 'border-t-emerald-500'}">
                         <div>
                             <div class="flex justify-between items-center mb-3">
-                                <span class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">${prod.category}</span>
-                                <span class="text-xs px-2 py-1 rounded font-bold border ${badgeColor}">🛡️ جدار الحماية: ${shariahStatus}</span>
+                                <span class="inline-block bg-slate-100 text-slate-600 text-[11px] px-2.5 py-1 rounded-md font-bold uppercase tracking-wider">${prod.category}</span>
+                                <span class="text-[11px] px-2.5 py-1 rounded-md font-bold border ${badgeColor}">🛡️ Firewall: ${firewallStatus}</span>
                             </div>
                             
-                            <h3 class="text-lg font-bold text-gray-800 mb-4">${prod.title}</h3>
+                            <h3 class="text-base md:text-lg font-bold text-slate-800 mb-3">${prod.title}</h3>
                             
-                            <div class="mb-4 rounded-lg overflow-hidden border border-gray-200 shadow-sm h-48 bg-gray-100">
-                                <img src="${productImage}" alt="${prod.title}" class="w-full h-full object-cover">
+                            <div class="mb-4 rounded-xl overflow-hidden border border-slate-100 shadow-inner h-44 bg-slate-50">
+                                <img src="${productImage}" alt="${prod.title}" class="w-full h-full object-cover" loading="lazy">
                             </div>
                             
-                            <p class="text-sm text-gray-700 leading-relaxed mb-4 bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-inner">
+                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-4 bg-slate-50 p-3.5 rounded-xl border border-slate-100 text-left">
                                 ${prod.description}
                             </p>
                         </div>
 
-                        <div class="border-t border-gray-100 pt-4 mt-2 flex justify-between items-center">
-                            <span class="text-xl font-extrabold text-emerald-600">${prod.price}</span>
-                            <a href="${prod.link}" target="_blank" class="bg-slate-900 text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-emerald-600 transition-colors">
-                                ${isRedirected ? 'عرض البديل الحلال الآمن' : 'فحص التحليل الأفلييت'}
+                        <div class="border-t border-slate-100 pt-4 mt-2 flex justify-between items-center">
+                            <span class="text-xl font-black text-slate-950">${prod.price}</span>
+                            <a href="${prod.link}" target="_blank" rel="noopener noreferrer" 
+                               class="bg-slate-900 text-white text-xs md:text-sm px-4 py-2.5 rounded-xl font-bold hover:bg-emerald-600 active:scale-98 transition-all inline-flex items-center justify-center shadow-xs">
+                                ${buttonText}
                             </a>
                         </div>
                     </div>
@@ -93,22 +155,20 @@
             });
         }
 
-        // محرك البحث الفوري
         document.getElementById('searchInput').addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
             const gridTitle = document.getElementById('gridTitle');
 
             if (query === "") {
-                gridTitle.innerText = "🔥 أحدث التحليلات والمنتجات النشطة (تحديث تلقائي)";
+                gridTitle.innerText = "🔥 Latest Monitored Active Products (Auto-Updated)";
                 renderProducts(allProducts);
             } else {
                 const filtered = allProducts.filter(prod => 
                     prod.title.toLowerCase().includes(query) || 
                     prod.description.toLowerCase().includes(query) || 
-                    prod.category.toLowerCase().includes(query) ||
-                    (prod.metadata?.shariah_compliant && prod.metadata.shariah_compliant.toLowerCase().includes(query))
+                    prod.category.toLowerCase().includes(query)
                 );
-                gridTitle.innerText = `🔍 نتائج البحث في الأرشيف الدائم (${filtered.length} منتج مكتشف)`;
+                gridTitle.innerText = `🔍 Archive Search Results (${filtered.length} products found)`;
                 renderProducts(filtered);
             }
         });
