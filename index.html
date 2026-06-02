@@ -69,7 +69,6 @@
             const title = (prod.title || "").toLowerCase();
             const category = (prod.category || "").toLowerCase();
 
-            // إصلاح الانسجام لمنتجات فئات المال والبدائل الحلال الاستثمارية
             if (title.includes('wealth') || title.includes('investment') || title.includes('halal') || category.includes('wealth')) {
                 return 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80'; 
             }
@@ -160,10 +159,10 @@
                 gridTitle.innerText = "🔥 Latest Monitored Active Products (Auto-Updated)";
                 renderProducts(allProducts);
             } else {
-                const filtered = allProducts.filter(prod => \
-                    prod.title.toLowerCase().includes(query) || \
-                    prod.description.toLowerCase().includes(query) || \
-                    prod.category.toLowerCase().includes(query)\
+                const filtered = allProducts.filter(prod => 
+                    prod.title.toLowerCase().includes(query) || 
+                    prod.description.toLowerCase().includes(query) || 
+                    prod.category.toLowerCase().includes(query)
                 );
                 gridTitle.innerText = `🔍 Archive Search Results (${filtered.length} products found)`;
                 renderProducts(filtered);
