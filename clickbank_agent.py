@@ -10,7 +10,6 @@ AFFILIATE_ID = 'fastbuy7'
 
 def fetch_top_14_marketplace_products():
     print("🔄 جاري تحميل قاعدة بيانات سوق ClickBank بالكامل...")
-    # الرابط الرسمي المباشر لسوق كليك بانك المشفر
     url = "https://www.clickbank.com/api/marketfeed.xml.zip"
     
     try:
@@ -19,7 +18,6 @@ def fetch_top_14_marketplace_products():
             print(f"❌ فشل تحميل البيانات من خوادم كليك بانك. كود الخطأ: {response.status_code}")
             return []
             
-        # فك الضغط عن الملف في الذاكرة مباشرة دون حفظه على الجهاز
         with zipfile.ZipFile(io.BytesIO(response.content)) as z:
             xml_filename = z.namelist()[0]
             with z.open(xml_filename) as f:
@@ -29,7 +27,6 @@ def fetch_top_14_marketplace_products():
         root = ET.fromstring(xml_content)
         all_products = []
         
-        # تفكيك هيكل XML الخاص بكليك بانك: Marketplace -> Category -> Site
         for category_node in root.findall('.//Category'):
             category_name = category_node.find('Name').text if category_node.find('Name') is not None else 'General'
             
@@ -38,7 +35,6 @@ def fetch_top_14_marketplace_products():
                 title = site_node.find('Title').text if site_node.find('Title') is not None else ''
                 description = site_node.find('Description').text if site_node.find('Description') is not None else ''
                 
-                # جلب مقياس الجاذبية (Gravity) وهو الدليل الحقيقي على المنتجات الأكثر مبيعاً حالياً
                 gravity_node = site_node.find('Gravity')
                 gravity = float(gravity_node.text) if gravity_node is not None and gravity_node.text else 0.0
                 
@@ -51,12 +47,8 @@ def fetch_top_14_marketplace_products():
                         'gravity': gravity
                     })
         
-        # ترتيب المنتجات تنازلياً: من الأعلى مبيعاً وجاذبية إلى الأقل
         sorted_products = sorted(all_products, key=lambda x: x['gravity'], reverse=True)
-        
-        # اقتطاع أفضل 14 منتجاً في القمة
-        top_14 = sorted_products[:14]
-        return top_14
+        return sorted_products[:14]
         
     except Exception as e:
         print(f"❌ حدث خطأ غير متوقع أثناء معالجة البيانات: {str(e)}")
@@ -71,10 +63,8 @@ def process_and_filter_products(raw_products):
         description = item['description']
         category = item['category']
         
-        # توليد رابط الأفلييت الحقيقي الخاص بك بمعرفك fastbuy7
         affiliate_link = f"https://hop.clickbank.net/?affiliate={AFFILIATE_ID}&vendor={vendor_id}"
         
-        # الجدار الناري الشرعي (Shariah Firewall) لفلترة المنتجات المخالفة
         title_lower = title.lower()
         desc_lower = description.lower()
         forbidden_keywords = ['dating', 'magic', 'tarot', 'alcohol', 'casino', 'betting', 'spell', 'wine']
