@@ -20,6 +20,8 @@ jobs:
           python-version: '3.x'
 
       - name: Run ClickBank Agent
+        env:
+          CB_API_KEY: ${{ secrets.CB_API_KEY }}
         run: python clickbank_agent.py
 
       - name: Commit and Push Updates to Store
