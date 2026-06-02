@@ -1,10 +1,11 @@
 import os
 import json
-import requests
 import zipfile
 import io
 import xml.etree.ElementTree as ET
 from datetime import datetime
+import urllib.request
+import urllib.error
 
 AFFILIATE_ID = 'fastbuy7'
 
@@ -12,13 +13,20 @@ def fetch_top_14_marketplace_products():
     print("🔄 جاري تحميل قاعدة بيانات سوق ClickBank بالكامل...")
     url = "https://www.clickbank.com/api/marketfeed.xml.zip"
     
+    # إضافة "قناع" المتصفح لتخطي جدار الحماية (Cloudflare) الخاص بـ ClickBank
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5"
+    }
+    
+    req = urllib.request.Request(url, headers=headers)
+    
     try:
-        response = requests.get(url, timeout=30)
-        if response.status_code != 200:
-            print(f"❌ فشل تحميل البيانات من خوادم كليك بانك. كود الخطأ: {response.status_code}")
-            return []
+        with urllib.request.urlopen(req, timeout=45) as response:
+            content = response.read()
             
-        with zipfile.ZipFile(io.BytesIO(response.content)) as z:
+        with zipfile.ZipFile(io.BytesIO(content)) as z:
             xml_filename = z.namelist()[0]
             with z.open(xml_filename) as f:
                 xml_content = f.read()
@@ -47,11 +55,18 @@ def fetch_top_14_marketplace_products():
                         'gravity': gravity
                     })
         
+        # ترتيب المنتجات من الأقوى مبيعاً إلى الأقل
         sorted_products = sorted(all_products, key=lambda x: x['gravity'], reverse=True)
         return sorted_products[:14]
         
+    except urllib.error.HTTPError as e:
+        print(f"❌ تم الحظر بواسطة كليك بانك. كود الخطأ: {e.code}")
+        return []
+    except zipfile.BadZipFile:
+        print("❌ الملف الذي تم تحميله ليس ZIP (تم حظر الطلب من السيرفر).")
+        return []
     except Exception as e:
-        print(f"❌ حدث خطأ غير متوقع أثناء معالجة البيانات: {str(e)}")
+        print(f"❌ حدث خطأ غير متوقع: {str(e)}")
         return []
 
 def process_and_filter_products(raw_products):
@@ -104,9 +119,9 @@ def main():
         with open('products.json', 'w', encoding='utf-8') as f:
             json.dump(output_data, f, indent=4, ensure_ascii=False)
             
-        print(f"✅ نجاح باهر! تم تحديث المتجر بأعلى 14 منتجاً مبيعاً في ClickBank بروابطك الخاصة.")
+        print(f"✅ نجاح باهر! تم تحديث المتجر بأعلى 14 منتجاً مبيعاً في ClickBank.")
     else:
-        print("⚠️ فشل التحديث التلقائي، تم الحفاظ على المنتجات الاحتياطية لضمان عمل الموقع.")
+        print("⚠️ فشل التحديث التلقائي، تم الحفاظ على المنتجات الحالية.")
 
 if __name__ == "__main__":
     main()
