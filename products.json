@@ -24,7 +24,7 @@
             "reverse_scarcity": "92% are completely satisfied, but 8% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=alpilean",
             "date_added": "2026-05-26",
-            "last_seen": "2026-06-02 03:30:24"
+            "last_seen": "2026-06-02 09:00:36"
         },
         {
             "id": "cb_javaburn",
@@ -50,40 +50,85 @@
             "reverse_scarcity": "89% are completely satisfied, but 11% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=javaburn",
             "date_added": "2026-05-26",
-            "last_seen": "2026-06-02 03:30:24"
+            "last_seen": "2026-06-02 09:00:36"
         },
         {
             "id": "cb_puravive",
             "vendor": "puravive",
             "title": "Puravive - Exotic Dissolve",
             "category": "Weight Loss",
-            "description": "Natural exotic ingredients targeting low brown adipose tissue.",
+            "description": "Natural exotic ingredients targeting low brown adipose tissue for fat burning.",
             "price": "$39",
+            "refund_rate": "5%",
+            "satisfaction_rate": "95%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "5%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "95% are completely satisfied, but 5% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=puravive",
             "date_added": "2026-05-26",
-            "last_seen": "2026-05-26 12:24:15"
+            "last_seen": "2026-06-02 09:00:36"
         },
         {
             "id": "cb_livpure",
             "vendor": "livpure",
             "title": "Liv Pure - Liver Optimization",
             "category": "Health",
-            "description": "Purify your liver and accelerate fat burning naturally.",
+            "description": "Purify your liver and accelerate fat burning naturally and safely.",
             "price": "$69",
+            "refund_rate": "9%",
+            "satisfaction_rate": "91%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "9%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "91% are completely satisfied, but 9% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=livpure",
             "date_added": "2026-05-26",
-            "last_seen": "2026-05-26 12:24:15"
+            "last_seen": "2026-06-02 09:00:36"
         },
         {
             "id": "cb_sugardefender",
             "vendor": "sugardef",
             "title": "Sugar Defender - Blood Sugar",
             "category": "Wellness",
-            "description": "Advanced bio-engineered formula for glucose support.",
+            "description": "Advanced bio-engineered formula for optimal glucose and daily energy support.",
             "price": "$49",
+            "refund_rate": "7%",
+            "satisfaction_rate": "93%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "7%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "93% are completely satisfied, but 7% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=sugardef",
             "date_added": "2026-05-26",
-            "last_seen": "2026-05-26 12:24:15"
+            "last_seen": "2026-06-02 09:00:36"
         },
         {
             "id": "cb_denticore",
@@ -109,7 +154,7 @@
             "reverse_scarcity": "94% are completely satisfied, but 6% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=denticore",
             "date_added": "2026-05-26",
-            "last_seen": "2026-06-02 03:30:24"
+            "last_seen": "2026-06-02 09:00:36"
         },
         {
             "id": "cb_investment_education",
@@ -135,7 +180,189 @@
             "reverse_scarcity": "96% are completely satisfied, but 4% complained about shipping times or strictly required effort.",
             "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=cleanwealth",
             "date_added": "2026-05-26",
-            "last_seen": "2026-06-02 03:30:24"
+            "last_seen": "2026-06-02 09:00:36"
+        },
+        {
+            "id": "cb_prodentim",
+            "vendor": "prodentim",
+            "title": "ProDentim - Oral Probiotics",
+            "category": "Health",
+            "description": "Doctor-formulated mix of 3.5 billion probiotics designed for gum and teeth health.",
+            "price": "$69",
+            "refund_rate": "4%",
+            "satisfaction_rate": "96%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "4%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "96% are completely satisfied, but 4% complained about shipping times or strictly required effort.",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=prodentim",
+            "date_added": "2026-06-02",
+            "last_seen": "2026-06-02 09:00:36"
+        },
+        {
+            "id": "cb_sightcare",
+            "vendor": "sightcare",
+            "title": "Sight Care - Vision Support",
+            "category": "Wellness",
+            "description": "Supports healthy eye tissue and maintains strong night vision naturally.",
+            "price": "$49",
+            "refund_rate": "8%",
+            "satisfaction_rate": "92%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "8%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "92% are completely satisfied, but 8% complained about shipping times or strictly required effort.",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=sightcare",
+            "date_added": "2026-06-02",
+            "last_seen": "2026-06-02 09:00:36"
+        },
+        {
+            "id": "cb_glucotrust",
+            "vendor": "glucotrust",
+            "title": "GlucoTrust - Sleep & Sugar",
+            "category": "Wellness",
+            "description": "Promotes healthy blood sugar levels while supporting deep, restful sleep.",
+            "price": "$69",
+            "refund_rate": "10%",
+            "satisfaction_rate": "90%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "10%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "90% are completely satisfied, but 10% complained about shipping times or strictly required effort.",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=glucotrust",
+            "date_added": "2026-06-02",
+            "last_seen": "2026-06-02 09:00:36"
+        },
+        {
+            "id": "cb_leanbiome",
+            "vendor": "leanbiome",
+            "title": "LeanBiome - Clear Gut",
+            "category": "Weight Loss",
+            "description": "Formulated with elite green select phytosome to clear the gut pathways.",
+            "price": "$59",
+            "refund_rate": "6%",
+            "satisfaction_rate": "94%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "6%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "94% are completely satisfied, but 6% complained about shipping times or strictly required effort.",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=leanbiome",
+            "date_added": "2026-06-02",
+            "last_seen": "2026-06-02 09:00:36"
+        },
+        {
+            "id": "cb_cortexi",
+            "vendor": "cortexi",
+            "title": "Cortexi - Hearing & Focus",
+            "category": "Health",
+            "description": "Provides 360-degree hearing support and mental sharpness with natural drops.",
+            "price": "$49",
+            "refund_rate": "5%",
+            "satisfaction_rate": "95%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "5%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "95% are completely satisfied, but 5% complained about shipping times or strictly required effort.",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=cortexi",
+            "date_added": "2026-06-02",
+            "last_seen": "2026-06-02 09:00:36"
+        },
+        {
+            "id": "cb_betabeat",
+            "vendor": "betabeat",
+            "title": "BetaBeat - Energy Formula",
+            "category": "Wellness",
+            "description": "Highly effective energy and blood sugar support using pure plant extracts.",
+            "price": "$49",
+            "refund_rate": "12%",
+            "satisfaction_rate": "88%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "12%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "88% are completely satisfied, but 12% complained about shipping times or strictly required effort.",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=betabeat",
+            "date_added": "2026-06-02",
+            "last_seen": "2026-06-02 09:00:36"
+        },
+        {
+            "id": "cb_metanail",
+            "vendor": "metanail",
+            "title": "MetaNail - Serum Pro",
+            "category": "Health",
+            "description": "Advanced complex designed to support healthy nails and beautiful feet.",
+            "price": "$59",
+            "refund_rate": "3%",
+            "satisfaction_rate": "97%",
+            "status": "compliant",
+            "metadata": {
+                "target_language": "ar",
+                "refund_rate": "3%",
+                "risk_level": "Low",
+                "recommended_posting_time": "19:00 GMT",
+                "usdc_aggregation_recommendation": "Hold earnings until $500, then automatically swap to USDC via Affise/Heleket",
+                "usdc_conversion_ready": true,
+                "shariah_compliant": "Yes"
+            },
+            "who_is_it_for": "For individuals dedicated to long-term results with realistic expectations.",
+            "who_is_it_not_for": "Not for those looking for magical instant results, overnight fixes, or illegal gains.",
+            "reverse_scarcity": "97% are completely satisfied, but 3% complained about shipping times or strictly required effort.",
+            "link": "https://hop.clickbank.net/?affiliate=fastbuy7&vendor=metanail",
+            "date_added": "2026-06-02",
+            "last_seen": "2026-06-02 09:00:36"
         }
     ]
 }
