@@ -21,37 +21,30 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-900 antialiased">
 
-    <!-- Store Notice Bar updated to use your exact "logo.png" image -->
     <div id="storeNotice" class="bg-slate-950 text-center py-3 px-4 border-b border-emerald-500/40 flex justify-center items-center">
         <img src="logo.png" alt="Store Notice & Logo" class="h-16 md:h-20 w-auto object-contain drop-shadow-lg">
     </div>
 
-    <!-- Header Section -->
     <header class="bg-white shadow-xs py-8 text-center border-b border-slate-200">
         <h1 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">📊 Statistical Transparency Index</h1>
         <p class="text-xs md:text-sm text-slate-500 mt-2 font-medium">Permanent Independent Archive for Unbiased Consumer Performance Data</p>
     </header>
 
-    <!-- Search Bar -->
     <div class="max-w-4xl mx-auto px-4 mt-8">
         <input type="text" id="searchInput" placeholder="🔍 Search the archive by category, product name, or compliance status..." 
                class="w-full px-4 py-3 border border-slate-300 rounded-xl shadow-xs focus:outline-none focus:ring-2 focus:ring-emerald-500 text-left bg-white text-sm md:text-base transition-all">
     </div>
 
-    <!-- Main Products Grid -->
     <main class="max-w-6xl mx-auto px-4 py-12">
         <h2 id="gridTitle" class="text-base md:text-lg font-bold mb-6 text-slate-700 border-l-4 border-emerald-500 pl-3">🔥 Latest Monitored Active Products (Auto-Updated)</h2>
         
         <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Dynamic Data -->
-        </div>
+            </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-12 mt-24 text-center">
         <div class="max-w-4xl mx-auto px-4 flex flex-col items-center gap-6">
             
-            <!-- ClickBank Payment Badges -->
             <div class="flex flex-wrap justify-center items-center gap-2.5 opacity-90 select-none">
                 <span class="px-3 py-1 text-[10px] md:text-xs font-extrabold uppercase tracking-widest text-blue-800 bg-blue-50 border border-blue-200 rounded-md shadow-2xs">Visa</span>
                 <span class="px-3 py-1 text-[10px] md:text-xs font-extrabold uppercase tracking-widest text-red-700 bg-red-50 border border-red-200 rounded-md shadow-2xs">MasterCard</span>
@@ -76,6 +69,10 @@
             const title = (prod.title || "").toLowerCase();
             const category = (prod.category || "").toLowerCase();
 
+            // إصلاح الانسجام لمنتجات فئات المال والبدائل الحلال الاستثمارية
+            if (title.includes('wealth') || title.includes('investment') || title.includes('halal') || category.includes('wealth')) {
+                return 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80'; 
+            }
             if (title.includes('coffee') || title.includes('java') || title.includes('burn')) {
                 return 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80'; 
             }
@@ -163,10 +160,10 @@
                 gridTitle.innerText = "🔥 Latest Monitored Active Products (Auto-Updated)";
                 renderProducts(allProducts);
             } else {
-                const filtered = allProducts.filter(prod => 
-                    prod.title.toLowerCase().includes(query) || 
-                    prod.description.toLowerCase().includes(query) || 
-                    prod.category.toLowerCase().includes(query)
+                const filtered = allProducts.filter(prod => \
+                    prod.title.toLowerCase().includes(query) || \
+                    prod.description.toLowerCase().includes(query) || \
+                    prod.category.toLowerCase().includes(query)\
                 );
                 gridTitle.innerText = `🔍 Archive Search Results (${filtered.length} products found)`;
                 renderProducts(filtered);
